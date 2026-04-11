@@ -75,7 +75,7 @@ export default function EditProfileModal({ isOpen, onClose, userData }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
-      <div className="bg-section relative w-full max-w-lg rounded-2xl border border-slate-700 p-6 shadow-2xl">
+      <div className="bg-section relative max-h-[calc(100vh-2rem)] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-700 p-6 shadow-2xl">
         {/* Header */}
         <div className="mb-4 flex items-center justify-between border-b border-slate-700 pb-3">
           <h2 className="text-text-primary text-xl font-bold">Edit Profile</h2>
