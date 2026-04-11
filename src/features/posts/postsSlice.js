@@ -9,6 +9,7 @@ import {
   deleteComment,
   PAGE_SIZE,
 } from "./postsThunks";
+import { updateProfile } from "../user/userThunks";
 
 function forEachPostList(state, postId, callback) {
   const lists = [state.feedItems, state.profileItems];
@@ -182,6 +183,30 @@ const postsSlice = createSlice({
             post.comments = post.comments.filter((c) => c.id !== commentId);
           }
         });
+      })
+      .addCase(updateProfile.fulfilled, (state, action) => {
+        const updatedUser = action.payload;
+        const newUserData = {
+          full_name: updatedUser.full_name,
+          username: updatedUser.username,
+          avatar_url: updatedUser.avatar_url,
+        };
+
+        const lists = [state.feedItems, state.profileItems];
+        for (const list of lists) {
+          for (const post of list) {
+            if (post.user_id === updatedUser.id) {
+              post.users = { ...post.users, ...newUserData };
+            }
+          }
+        }
+
+        if (state.currentPost?.user_id === updatedUser.id) {
+          state.currentPost.users = {
+            ...state.currentPost.users,
+            ...newUserData,
+          };
+        }
       });
   },
 });
