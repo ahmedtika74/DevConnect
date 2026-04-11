@@ -38,9 +38,9 @@ export default function PageLayout() {
   }, [currentUser, dispatch]);
 
   return (
-    <div className="flex items-start justify-center lg:justify-end xl:justify-center">
+    <div className="flex items-start justify-center">
       <Sidebar />
-      <div className="flex-1 lg:ml-120 xl:mr-120">
+      <div className="min-h-screen flex-1 pb-20 lg:ml-74 lg:pb-0 xl:mr-80">
         <Outlet />
       </div>
       <BottomNav />

@@ -58,7 +58,7 @@ export default function CreatePostForm() {
 
   return (
     <div className="px-4">
-      <div className="bg-glass/70 flex flex-col items-center justify-center gap-4 rounded-2xl p-6 xl:min-w-2xl">
+      <div className="bg-glass/70 flex w-full flex-col items-center justify-center gap-4 rounded-2xl p-6">
         <div className="flex w-full gap-4">
           <Avatar src={currentUser?.avatar_url} alt="user avatar" size="lg" />
 
