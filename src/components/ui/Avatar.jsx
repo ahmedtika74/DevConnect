@@ -8,7 +8,7 @@ export default function Avatar({ src, alt, size = "md" }) {
   };
 
   return (
-    <div className={`${sizes[size]} overflow-hidden rounded-full`}>
+    <div className={`${sizes[size]} shrink-0 overflow-hidden rounded-full`}>
       <img
         src={src || "UserAvatar.png"}
         alt={alt || "User avatar"}
