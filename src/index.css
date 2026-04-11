@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-tertiary: #c084fc;
+  --color-neutral: #0f172a;
+  --color-text-primary: #dae2fd;
+  --color-text-secondary: #c2c6d6;
+  --color-glass: #171f33;
+  --color-stroke: #424754;
+  --color-input: #2d3449;
+  --color-sidebar: #131b2e;
+  --color-section: #0b1326;
+}
+
+body {
+  @apply bg-neutral;
+}
+
+@utility input-premium {
+  background-color: #2d3449;
+  border: 1px solid rgba(66, 71, 84, 0.15);
+  transition: all 200ms ease-in-out;
+  color: #dae2fd;
+}
+
+@utility btn-primary {
+  background: linear-gradient(45deg, #4d8eff, #571bc1);
+  color: #0b1326;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 40px 0 rgba(173, 198, 255, 0.06);
+  }
+}
+
+@utility btn-secondary {
+  background: linear-gradient(45deg, #adc6ff, #d0bcff);
+  color: #0b1326;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+}
+
+@utility hidden-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+@utility icon-upload-btn {
+  @apply flex cursor-pointer text-white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #475569;
+}
