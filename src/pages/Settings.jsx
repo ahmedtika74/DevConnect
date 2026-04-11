@@ -115,7 +115,8 @@ export default function Settings() {
               <div className="flex justify-end">
                 <Button
                   type="submit"
-                  loading={isUpdatingPassword || !password.trim()}
+                  loading={isUpdatingPassword}
+                  disabled={!password.trim()}
                   className="text-text-primary rounded-full bg-blue-600 px-6 py-2 text-sm font-bold transition-colors hover:bg-blue-700 disabled:opacity-50"
                 >
                   Update Password
