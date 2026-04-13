@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../features/user/userSlice";
 import { getNavigationLinks } from "../../constants/navigation";
 import Button from "../ui/Button";
+import SearchBar from "../ui/SearchBar";
 
 export default function Sidebar() {
   const dispatch = useDispatch();
@@ -20,10 +21,13 @@ export default function Sidebar() {
   return (
     <div className="bg-sidebar fixed top-0 left-0 hidden h-screen w-74 flex-col items-start justify-between border-r border-slate-700 p-6 lg:flex">
       <div className="w-full">
-        <div className="mb-8 w-full">
+        <div className="mb-6 w-full">
           <h1 className="block bg-linear-to-r from-[#D0BCFF] to-[#D0BCFF] bg-clip-text text-center text-3xl font-bold text-transparent md:text-4xl">
             DevConnect
           </h1>
+        </div>
+        <div className="mb-6 xl:hidden">
+          <SearchBar />
         </div>
         <nav>
           {getNavigationLinks(currentUser?.username).map((link) => {
