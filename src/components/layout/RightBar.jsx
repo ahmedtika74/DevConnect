@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import Button from "../ui/Button";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
