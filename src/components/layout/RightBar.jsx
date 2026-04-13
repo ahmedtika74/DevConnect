@@ -6,6 +6,7 @@ import { supabase } from "../../services/supabaseClient";
 import { Link } from "react-router-dom";
 import { toggleFollow } from "../../features/user/followSlice";
 import Avatar from "../ui/Avatar";
+import SearchBar from "../ui/SearchBar";
 
 export default function RightBar() {
   const { currentUser } = useSelector((state) => state.user);
@@ -82,18 +83,10 @@ export default function RightBar() {
 
   return (
     <div className="bg-sidebar fixed top-0 right-0 hidden h-screen w-80 flex-col gap-6 overflow-y-auto border-l border-slate-700 p-6 xl:flex">
-      {/* Search Bar */}
-      <div className="relative">
-        <Search className="absolute top-3 left-3 text-slate-400" size={20} />
-        <input
-          type="text"
-          placeholder="Search users..."
-          className="w-full rounded-full bg-slate-800/50 py-3 pr-4 pl-10 text-white placeholder-slate-400 transition-all outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+      <SearchBar />
 
       {/* Suggested Users */}
-      <div className="h-fit rounded-2xl border border-slate-700 bg-slate-800/20 p-4">
+      <div className="h-fit rounded-2xl border border-slate-700 bg-slate-800/50 p-4">
         <h2 className="mb-4 text-xl font-bold text-white">Users to follow</h2>
 
         <div className="flex flex-col gap-4">
