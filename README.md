@@ -1,6 +1,6 @@
 # DevConnect — Social Platform for Developers
 
-A full-stack social networking application built for developers to connect, share updates, and engage with a tech-focused community. Features real-time notifications, infinite scroll feeds, user profiles with follow systems, and full CRUD operations — all powered by a modern React + Supabase architecture.
+A full-stack social networking application. Features real-time notifications, infinite scroll feeds, user profiles with follow systems, and full CRUD operations - all powered by a modern React + Supabase architecture.
 
 Designed, built, and shipped solo in 2 weeks.
 
